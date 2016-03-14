@@ -1,0 +1,5 @@
+#!/bin/bash
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+export HUBOT_HIPCHAT_JID=JabberID
+export HUBOT_HIPCHAT_PASSWORD=JabberPassword
+exec node_modules/.bin/hubot --adapter hipchat --name "myhubot"

@@ -1,0 +1,16 @@
+[Unit]
+Description=My Hubot
+
+[Service]
+ExecStart=/bin/bash /vagrant/systemd/myhubot-prod
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=myhubot
+User=admin
+Group=admin
+Environment=HOME=/home/admin
+WorkingDirectory=/vagrant/myhubot
+
+[Install]
+WantedBy=multi-user.target
